@@ -27,12 +27,12 @@ export default function RootLayout({
   };
   return (
     <html lang="en">
-      <body className="bg-white text-black dark:bg-black dark:text-white">
-        <div className="flex justify-between">
+      <body className="bg-black text-white dark:bg-white dark:text-black">
+        <div className="max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-screen-xxl mx-auto flex justify-between">
           {/* <button onClick={toggleDarkMode}>change color</button> */}
-          <div><LeftBar/></div>
-          <div> {children} </div>
-          <div><RightBar/></div>
+          <div className="px-2 xsm:px-4 xxl:px-8"><LeftBar/></div>
+          <div className="flex-1 lg:min-w-[600px] border-x-[1px] border-borderGray px-2"> {children} </div>
+          <div className="flex-1 hidden lg:flex ml-4 md:ml-8"><RightBar/></div>
         </div>
       </body>
     </html>
