@@ -6,8 +6,17 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
+      screens:{
+        xsm:"500px",
+        sm:"600px",
+        md:"690px",
+        ld:"980px",
+        xl:"1078px",
+        xxl:"1265px",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
