@@ -1,14 +1,22 @@
+import Share from "@/components/Share";
+import Feed from "../components/Feed";
+import Link from "next/link";
 
 export default function Home() {
 
 
   return (
     <div className="">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        Home
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-      </footer>
+      <div className="px-4 pt-4 flex justify-between  text-textGray border-b-[1px] border-borderGray">
+        <Link  href="" className="flex items-center pb-3 border-b-4 border-iconBlue">
+          For you
+        </Link>
+        <Link  href="" className="flex items-center pb-3  border-b-4 border-iconBlue">
+          Following
+        </Link>
+      </div>
+      <Share/>
+      <Feed/>
     </div>
   );
 }
