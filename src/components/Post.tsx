@@ -1,14 +1,14 @@
 import Image from 'next/image'
 import React from 'react'
 import PostInfo from './PostInfo'
-import { Verified } from '@mui/icons-material'
+import { SyncRounded, Verified } from '@mui/icons-material'
 import PostInteractions from './PostInteractions'
 
 const Post = () => {
   return (
     <div className='p-4 border-y-[1px] border-borderGray'>
         <div className='flex items-center gap-2 text-textGray mb-2 text-sm'>
-            icon
+          <SyncRounded/>
             <span>Double reposted</span>
         </div>
         <div className='flex gap-4'>

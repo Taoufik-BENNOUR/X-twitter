@@ -8,8 +8,8 @@ import { HistoryEdu, PostAdd, VerifiedUserSharp } from '@mui/icons-material'
 const LeftBar = () => {
   return (
     <div className='h-screen sticky top-0 flex flex-col justify-between pt-2 pb-8'>
-      <div className='flex flex-col gap-4 text-lg items-center'>
-        <Link href={"/"}>
+      <div className='flex flex-col gap-4 text-lg items-start'>
+      <Link href={"/"} className='p-2'>
           <Image src={"globe.svg"} alt='logo' width={24} height={24}/>
         </Link>
           <div className='flex flex-col gap-4'>
