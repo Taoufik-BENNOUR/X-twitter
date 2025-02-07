@@ -1,7 +1,16 @@
+"use client"
 import { EventRepeat, FormatBold, FormatItalic, List, LocationOn, LocationOnOutlined, PermMedia, SentimentSatisfiedAlt, Voicemail } from "@mui/icons-material"
 import Image from "next/image"
+import { useState } from "react"
 
 const Share = () => {
+  const [media, setMedia] = useState<File|null>(null)
+
+  const handleMediaChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+    if(e.target.files && e.target.files[0]){
+      setMedia(e.target.files[0])
+    }
+  }
   return (
     <div className="p-4 flex gap-4">
       {/* AVATAR */}
@@ -12,7 +21,10 @@ const Share = () => {
         <input className="outline-none border-none bg-transparent placeholder:text-textGray" type="text" placeholder="Write a post" />
         <div className="flex items-center justify-between flex-wrap">
           <div className="flex gap-4 items-center text-iconBlue">
-            <PermMedia className="cursor-pointer"/>
+            <input onChange={handleMediaChange} className="hidden" type="file" id="file" />
+            <label htmlFor="file">
+              <PermMedia className="cursor-pointer"/>
+            </label>
             <Voicemail className="cursor-pointer"/>
             <List className="cursor-pointer"/>
             <SentimentSatisfiedAlt className="cursor-pointer"/>
