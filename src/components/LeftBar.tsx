@@ -20,10 +20,10 @@ const LeftBar = () => {
                     </Link>
           )}
           </div>
-          <Link href={"/"} className='flex justify-center items-center xxl:hidden bg-white rounded-full text-black p-2 h-12 w-12' >
+          <Link href={"/compose/post"} className='flex justify-center items-center xxl:hidden bg-white rounded-full text-black p-2 h-12 w-12' >
             <HistoryEdu/>
           </Link>
-          <Link href={"/"} className='hidden xxl:block bg-white text-black rounded-full py-2 px-20'>
+          <Link href={"/compose/post"} className='hidden xxl:block bg-white text-black rounded-full py-2 px-20'>
             Post
           </Link>
       </div>
