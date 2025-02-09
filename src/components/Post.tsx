@@ -18,31 +18,37 @@ type TwitterPost= {
     quotes: number;
     post_image:string;
   }
-  type PostProps = {
-    post: TwitterPost | undefined ;
-  };
-const Post = ({post}:PostProps) => {
+
+const Post = ({post,type}:{post:TwitterPost|undefined,type?:"status"|"comment"}) => {
     if (!post) {
         return <div>Post not found!</div>;  // Handle the undefined case
       }
+      if(type)
   return (
     <div className='p-4 border-y-[1px] border-borderGray'>
         <div className='flex items-center gap-2 text-textGray mb-2 text-sm'>
             <SyncRounded/>
             <span>Double reposted</span>
         </div>
-        <div className='flex gap-4'>
-            <div className='h-10 w-10 rounded-full overflow-hidden relative'>
+        <div className={`flex gap-4 ${type==="status"&&"flex-col"}`}>
+            <div className={`${type==="status" && "hidden"} h-10 w-10 rounded-full overflow-hidden relative`}>
                 <Image src={"/globe.svg"} alt='globe' fill />
             </div>
             <div className='flex-1 flex flex-col gap-2'>
-                <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-1 flex-wrap text-textGray">
-                        <h1 className='font-bold'>{post.username}<Verified  className='text-iconBlue' sx={{ fontSize: 20 }} /> </h1>
-                        <span>{post.handle}</span>
-                        <span>{post.time_ago}</span>
+                <div className='flex justify-between w-full'>
+                    <div className="flex flex-1 items-center justify-between">
+                        <div className="flex items-center gap-1 flex-wrap text-textGray">
+                            <div className={`${type!=="status" && "hidden"} h-10 w-10 rounded-full overflow-hidden relative`}>
+                                <Image src={"/globe.svg"} alt='globe' fill />
+                            </div>
+                            <div className={`${type!=="status" && "flex gap-2"}`}>
+                                <h1 className='font-bold'>{post.username}<Verified  className='text-iconBlue' sx={{ fontSize: 20 }} /> </h1>
+                                <span>{post.handle}</span>
+                                {type!=="status" &&<span>{post.time_ago}</span>}
+                            </div>
+                        </div>
+                        <PostInfo/>
                     </div>
-                    <PostInfo/>
                 </div>
                 <p className='flex'>
                     {post.post_content}

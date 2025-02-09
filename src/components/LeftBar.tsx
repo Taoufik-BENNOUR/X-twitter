@@ -10,7 +10,7 @@ const LeftBar = () => {
     <div className='h-screen sticky top-0 flex flex-col justify-between pt-2 pb-8'>
       <div className='flex flex-col gap-4 text-lg items-start'>
       <Link href={"/"} className='p-2'>
-          <Image src={"globe.svg"} alt='logo' width={24} height={24}/>
+          <Image src={"/globe.svg"} alt='logo' width={24} height={24}/>
         </Link>
           <div className='flex flex-col gap-4'>
               {sidebarData.map((el,i)=> 

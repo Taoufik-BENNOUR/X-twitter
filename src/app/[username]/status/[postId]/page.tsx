@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useParams } from 'next/navigation';
 import postData from "../../../../utils/postData.json"
 import Post from '@/components/Post';
+import Comments from '@/components/Comments';
 
 
 const StatusPage = () => {
@@ -19,7 +20,8 @@ const StatusPage = () => {
         </Link>
         <h1>T.Dev</h1>
       </div>
-        <Post post={singlePost} />
+        <Post post={singlePost} type='status' />
+        <Comments/>
     </div>
   )
 }

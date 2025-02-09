@@ -6,7 +6,7 @@ const Feed = () => {
   return (
     <div>
       {postData.map((post,i)=>
-        <Post post={post} key={i}/>
+        <Post post={post} key={i} type="comment"/>
       )}
     </div>
   )
