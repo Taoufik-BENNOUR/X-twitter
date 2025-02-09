@@ -1,0 +1,72 @@
+[
+    {
+      "id": 1,
+      "username": "T Dev",
+      "handle": "@tdev",
+      "time_ago": "1 day ago",
+      "post_content": "Lorem, ipsum dolor sit amet consectetur adipisi cing elit. Necessitatibus quisquam er ror dolorem? Ratione, ab nihil sit ducimu s modi beatae minus delectus alias sequi un de aliquam amet neque! Optio, earum similique!",
+      "hashtags": ["aot"],
+      "likes": 100,
+      "retweets": 100,
+      "replies": 100,
+      "quotes": 100,
+      "post_image":"/images/aot.jpg"
+    },
+    {
+      "id": 2,
+      "username": "John Doe",
+      "handle": "@johndoe",
+      "time_ago": "3 hours ago",
+      "post_content": "Just finished reading a great book! Highly recommend it to everyone!",
+      "hashtags": ["booklover", "reading"],
+      "likes": 250,
+      "retweets": 50,
+      "replies": 20,
+      "quotes": 10,
+      "post_image":"/images/halloween-scene-illustration.avif"
+
+    },
+    {
+      "id": 3,
+      "username": "Sarah Lee",
+      "handle": "@sarah_lee",
+      "time_ago": "2 days ago",
+      "post_content": "Loving the new coffee shop in town. Best cappuccino I've had in a while!",
+      "hashtags": ["coffee", "cappuccino"],
+      "likes": 180,
+      "retweets": 40,
+      "replies": 15,
+      "quotes": 5,
+      "post_image":"/images/illustration-anime-city.avif"
+
+    },
+    {
+      "id": 4,
+      "username": "Tech Guru",
+      "handle": "@techguru",
+      "time_ago": "5 hours ago",
+      "post_content": "AI is changing the way we think about technology. Excited for the future!",
+      "hashtags": ["AI", "tech"],
+      "likes": 300,
+      "retweets": 120,
+      "replies": 45,
+      "quotes": 30,
+      "post_image":"/images/gear5.webp"
+
+    },
+    {
+      "id": 5,
+      "username": "Fitness Freak",
+      "handle": "@fitfreak",
+      "time_ago": "2 days ago",
+      "post_content": "Did a 5-mile run today. Feeling strong and ready for the next challenge!",
+      "hashtags": ["fitness", "running"],
+      "likes": 220,
+      "retweets": 60,
+      "replies": 25,
+      "quotes": 8,
+      "post_image":"/images/halloween-scene-illustration.avif"
+
+    }
+  ]
+  

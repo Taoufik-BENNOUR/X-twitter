@@ -2,25 +2,25 @@
 
 import { BarChart, Bookmark, BookmarkBorder, BookmarkOutlined, ChatBubbleOutlineRounded, FavoriteBorder, HeartBrokenOutlined, IosShare, SyncRounded } from "@mui/icons-material"
 
-const PostInteractions = () => {
+const PostInteractions = ({likes,retweets,replies,quotes}:any) => {
   return (
     <div className="flex items-center justify-between text-sm text-textGray">
         <div className="flex flex-1 justify-between">
           <div className="flex items-center cursor-pointer hover:text-iconBlue gap-1">
             <ChatBubbleOutlineRounded/>
-            100
+            {replies}
           </div>
           <div className="flex items-center cursor-pointer hover:text-iconGreen gap-1">
           <SyncRounded/>
-          100
+          {retweets}
           </div>
           <div className="flex items-center cursor-pointer hover:text-iconPink gap-1">
           <FavoriteBorder/>
-          100
+          {likes}
           </div>
           <div className="flex items-center cursor-pointer hover:text-iconBlue gap-1">
           <BarChart/>
-          100
+          {quotes}
           </div>
         </div>
         <div className="flex gap-2 pl-8">
