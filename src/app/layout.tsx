@@ -29,7 +29,7 @@ export default function RootLayout({
   const toggleDarkMode = () => {
     setDarkMode(prev => !prev);
   };
-  if(!isAuthenticated){
+  if(isAuthenticated){
     return (
       <html lang="en">
         <body className="bg-black text-white dark:bg-white dark:text-black">
