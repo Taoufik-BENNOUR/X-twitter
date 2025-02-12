@@ -26,7 +26,7 @@ async function main() {
     for (let j = 1; j <= 5; j++) {
       const post = await prisma.post.create({
         data: {
-          desc: `Post ${j} by ${users[i].username}`,
+          post_content: `Post ${j} by ${users[i].username}`, // Ensure it's not undefined or null
           userId: users[i].id,
         },
       });
@@ -62,7 +62,7 @@ async function main() {
   for (let i = 0; i < posts.length; i++) {
     const comment = await prisma.post.create({
       data: {
-        desc: `Comment on Post ${posts[i].id} by ${users[(i + 1) % 5].username}`,
+        post_content: `Comment on Post ${posts[i].id} by ${users[(i + 1) % 5].username}`,
         userId: users[(i + 1) % 5].id,
         parentPostId: posts[i].id, // Linking the comment to the post
       },
@@ -75,7 +75,7 @@ async function main() {
   for (let i = 0; i < posts.length; i++) {
     const repost = await prisma.post.create({
       data: {
-        desc: `Repost of Post ${posts[i].id} by ${users[(i + 2) % 5].username}`,
+        post_content: `Repost of Post ${posts[i].id} by ${users[(i + 2) % 5].username}`,
         userId: users[(i + 2) % 5].id, // The user who is reposting
         repostId: posts[i].id, // Linking to the original post being reposted
       },

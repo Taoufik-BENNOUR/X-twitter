@@ -16,10 +16,11 @@ type TwitterPost= {
     retweets: number;
     replies: number;
     quotes: number;
-    post_image:string;
+    post_image:string|null;
   }
 
-const Post = ({post,type}:{post:TwitterPost|undefined,type?:"status"|"comment"}) => {
+const Post = ({post,type}:{post:any|undefined,type?:"status"|"comment"}) => {
+    
     if (!post) {
         return <div>Post not found!</div>;  // Handle the undefined case
       }
@@ -54,7 +55,7 @@ const Post = ({post,type}:{post:TwitterPost|undefined,type?:"status"|"comment"})
                     {post.post_content}
                 </p>
                 <Link href={`/user/status/${post.id}`}>
-                <Image src={post.post_image} alt='aot' width={600} height={600} />
+                {post.post_img &&<Image src={"/images/"+post.post_img} alt='aot' width={600} height={600} />}
                 </Link>
                 <PostInteractions likes={post.likes} retweets={post.retweets} replies={post.replies} quotes={post.quotes}    />
             </div>

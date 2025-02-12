@@ -34,8 +34,8 @@ model Post {
   id         Int        @id @default(autoincrement())
   createdAt  DateTime   @default(now())
   updatedAt  DateTime   @updatedAt
-  desc       String?    @db.VarChar(255)
-  img        String?
+  post_content String @db.VarChar(255)
+  post_img        String?
   video      String?
   isSensitive Boolean @default(false)
 
