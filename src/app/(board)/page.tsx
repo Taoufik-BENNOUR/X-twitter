@@ -1,7 +1,7 @@
 import Share from "@/components/Share";
-import Feed from "../components/Feed";
+import Feed from "../../components/Feed";
 import Link from "next/link";
-import { prisma } from "../prisma";
+import { prisma } from "../../prisma";
 
 export default async function Home () {
 

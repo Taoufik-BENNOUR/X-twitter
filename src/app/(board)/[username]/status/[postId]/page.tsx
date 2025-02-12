@@ -2,7 +2,7 @@
 import { ArrowBack } from '@mui/icons-material'
 import Link from 'next/link'
 import { useParams } from 'next/navigation';
-import postData from "../../../../utils/postData.json"
+import postData from "../../../../../utils/postData.json"
 import Post from '@/components/Post';
 import Comments from '@/components/Comments';
 
