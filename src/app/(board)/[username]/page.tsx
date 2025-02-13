@@ -1,10 +1,14 @@
 import Feed from '@/components/Feed'
+import { prisma } from '@/prisma'
 import { ArrowBack, CalendarMonth, Mail, MailOutline, More, MoreHorizOutlined, Place, PlaceOutlined, Search } from '@mui/icons-material'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const UserPage = () => {
+const UserPage = async({params}:{params:{username:string}}) => {
+
+  const user = await prisma.user.findUnique({where:{username:params.username}})
+  
   return (
     <div>
         <div className="flex items-center gap-8 backdrop-blur-md sticky top-0 p-4 z-10 bg-black opacity-70">
@@ -52,7 +56,7 @@ const UserPage = () => {
                 <span className='text-textGray'>Followings</span> 
             </div>
         </div>
-        <Feed/>
+        <Feed userProfileId={user?.id} />
     </div>
   )
 }
