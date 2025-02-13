@@ -26,7 +26,7 @@ const Share = () => {
     <div className="p-4 flex gap-4">
       {/* AVATAR */}
       <div className="h-10 w-10 rounded-full overflow-hidden relative">
-        <Image className="object-cover" src="/aot.jpg" alt="aot" fill/>
+        <Image className="object-cover" src="/images/profileImg.avif" alt="aot" fill/>
       </div>
       <div className="flex flex-col gap-4 flex-1">
         <input className="outline-none border-none bg-transparent placeholder:text-textGray" type="text" placeholder="Write a post" />
