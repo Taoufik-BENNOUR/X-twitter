@@ -7,7 +7,9 @@ import InfiniteFeed from "./InfiniteFeed"
 const Feed = async({userProfileId}:{userProfileId?:string}) => {
   
   const {userId} = await auth()
-  if(!userId) return
+  if (!userId) {
+    return <div>User not authenticated</div>;
+  }
   const whereCondition = userProfileId? {parentPostId:null,userId:userProfileId} : {
     parentPostId:null,
     userId:{
@@ -21,9 +23,9 @@ const Feed = async({userProfileId}:{userProfileId?:string}) => {
   return (
     <div>
       {posts.map((post,i)=>
-        <Post post={post} key={i} type="comment"/>
+        <Post post={post} key={i} type="status" />
       )}
-      {/* <InfiniteFeed/> */}
+      <InfiniteFeed userProfileId={userProfileId}/>
     </div>
   )
 }
